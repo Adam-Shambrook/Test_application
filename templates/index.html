@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Script-Type" content="type/javacript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta property="twitter:account_id" content="1512917531" />
+    <meta name="robots" content="noindex,follow" />
+    <link rel="icon" type="image/x-icon" href="https://www.wiggle.co.uk/favicon.ico">
+    <link rel="shortcut icon" href="https://www.wiggle.co.uk/favicon.ico" type="image/x-icon">
+
+
+    <script>(function (url) {var e = document.createElement('link'); e.type = 'text/css'; e.rel  = 'stylesheet'; e.href = url; var h = document.head || document.getElementsByTagName('head')[0]; h.insertBefore(e, h.lastChild); })('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,400,700&subset=cyrillic');</script>
+    <title>Wiggle Checkout</title>
+    <link href="../static/assets/css/wiggle.css" rel="stylesheet" type="text/css" />
+
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//www.wigglestatic.com/presentation/favicons/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//www.wigglestatic.com/presentation/favicons/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="//www.wigglestatic.com/presentation/favicons/apple-touch-icon-precomposed.png">
+        <!--[if lt IE 9]>
+            <script type="text/javascript" src="//www.wigglestatic.com/presentation/js/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+<body class="bem-checkout__bg">
+        <div id="consent_blackbar"></div>
+
+    
+    <div id="customer-contact-pannel">
+        <div id="lpButtonDiv" class="live-chat"></div>
+        
+    </div>
+    <div class="bem-checkout">
+        <nav class="bem-checkout__header">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="https://www.wiggle.co.uk/" class="js-show-leave-message" data-ga-action="Logo" itemprop="url">
+                            <img class="bem-checkout__logo" src="../static/assets/images/Wiggle_logo.png" itemprop="logo" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="wiggle" class="bem-checkout__container container" data-page-area="Main">
+            <div class="container-for-light-box">
+            </div>
+            
+
+<input data-val="true" data-val-required="The PaymentType field is required." id="PaymentType" name="PaymentType" type="hidden" value="AdyenCard" />
+
+<div class="bem-checkout__container container">
+    <div class="js-confirmationSummaryTopPlaceholder">
+        <div id="sideBar" class="bem-checkout__sidebar col-md-4 js-checkout-sideBar">
+            <div class="bem-checkout__container-block">
+    <div class="js-wiggle-plus-data hide"
+         data-wiggle-plus-visibility=""
+         data-show-wiggle-plus-unavailable="False"
+         data-show-wiggle-plus-delivery-message="False">
+    </div>
+    <div class="js-delivery-data hide"
+         data-has-free-delivery-to-spend="false"
+         data-free-delivery-description=""
+         data-free-delivery-header="">
+    </div>
+    <div class="js-us-tax-service-data hide"
+         data-us-tax-service-unavailable-message="">
+    </div>
+
+    <div class="bem-checkout__sidebar-overlay hide">
+        <div class="bem-checkout__sidebar-spinner">
+            <i class="bem-checkout__sidebar-spin-icon icon-spin2 animate-spin"></i>
+        </div>
+    </div>
+    <div class="bem-order-summary__content">
+        <h2 class="bem-checkout__title bem-typography__header-1">Order Summary</h2>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="bem-order-summary__panel">
+                            <div class="bem-order-summary__row" id="item">
+                                <div class="bem-order-summary__product-description row ">
+  
+    <div class="col-xs-7">
+        <div class="bem-order-summary__product-name">
+            1 x Wahoo ELEMNT BOLT GPS Cycle Computer
+        </div>
+        <div class="bem-order-summary__product-specs">One Size Stealth Black</div>
+            </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="bem-order-summary__value">
+&#163;184.99        </div>
+    </div>
+</div>
+                            </div>
+
+                        <div class="bem-order-summary__row row" id="edit-basket">
+        <span class="bem-order-summary__label">
+<a class="js-show-leave-message" href="/basket">Edit basket</a>        </span>
+    </div>
+
+
+        <div class="bem-order-summary__row row" id="vat">
+            <span class="bem-order-summary__label">VAT (included)</span>
+            <span class="bem-order-summary__value">&#163;30.83</span>
+        </div>
+
+                            <div class="bem-order-summary__row row" id="delivery">
+            <span class="bem-order-summary__label">
+                Delivery
+            </span>
+            <span class="bem-order-summary__value">
+                <input disabled="true" id="NotSelectedDeliveryValue" name="NotSelectedDeliveryValue" type="hidden" value="not selected" />
+Free            </span>
+        </div>
+                    
+
+                            <div class="bem-order-summary__row--total row">
+            <span class="bem-order-summary__label--total">
+                Total
+            </span>
+            <input disabled="true" id="BasketTotalWithoutShipping" name="BasketTotalWithoutShipping" type="hidden" value="&amp;#163;184.99" />
+            <input disabled="true" id="BasketTotalWithShippingRawValue" name="BasketTotalWithShippingRawValue" type="hidden" value="184.99" />
+            <span id="orderSummary-total" class="bem-order-summary__value--total js-orderSummary-total">
+                &#163;184.99
+            </span>
+        </div>
+
+                    
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+    <div class="bem-checkout__main col-md-8">
+        <div class="bem-checkout__container-block">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="bem-checkout__title bem-typography__header-1">Summary</h1>
+                </div>
+            </div>
+
+                <div class="js-free-delivery-offer bem-alert bem-alert--warning hide">
+                    <h4 class="js-free-delivery-offer-header"></h4>
+                    <p class="js-free-delivery-offer-description"></p>
+                </div>
+
+            <div class="row">
+    <div class="col-xs-12">
+    
+    </div>
+</div>
+
+            <div id="qa-confirmationDelivery" class="row">
+    <div class="col-xs-12">
+        <p></p>
+        <h3 class="bem-typography__header-3">Delivery</h3>
+
+
+        <div class="bem-checkout__sidebar-overlay js-deliveryBoxSpinner hide">
+            <div class="bem-checkout__sidebar-spinner">
+                <i class="bem-checkout__sidebar-spin-icon icon-spin2 animate-spin"></i>
+            </div>
+        </div>
+
+        <div class="js-delivery-box-container" data-country-id="1">
+            <div class="bem-panels__panel-group">
+    <div href="" class="bem-panels__panel">
+        <fieldset class="bem-forms__fieldset">
+            <div class="bem-panels__heading">
+                <div class="col-sm-10">
+                    
+                            <p>
+                                <strong class="bem-typography__strong">Delivering to:</strong>
+                                <span class="qa-delivery-address js-delivery-address" data-postcode="TW9 1EN">
+
+
+
+
+                                    2 Whittaker Ave, Richmond TW9 1EN
+                                </span>
+                            </p>
+                                        <p><strong class="bem-typography__strong">Via method:</strong><span class="qa-delivery-address"> By standard tracked delivery </span></p>
+                                            <p><strong class="bem-typography__strong">On date:</strong><span class="qa-estimated-delivery"> Estimated delivery on or before Thursday, 28 January 2021</span> </p>
+                                                        </div>
+                
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+        </div>
+        
+          
+
+    <div class="bem-order-summary__content">
+        <h2 class="bem-checkout__title bem-typography__header-1">Order Summary</h2>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="bem-order-summary__panel">
+                            <div class="bem-order-summary__row" id="item">
+                                <div class="bem-order-summary__product-description row ">
+    <div class="col-xs-3">
+        <img src="../static/assets/images/Wahoo.jpeg" class="img-responsive" alt="Wahoo ELEMNT BOLT GPS Cycle Computer" title="Wahoo ELEMNT BOLT GPS Cycle Computer">
+    </div>
+    <div class="col-xs-7">
+        <div class="bem-order-summary__product-name">
+            1 x Wahoo ELEMNT BOLT GPS Cycle Computer
+        </div>
+        <div class="bem-order-summary__product-specs">One Size Stealth Black</div>
+            </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="bem-order-summary__value">
+&#163;184.99        </div>
+    </div>
+</div>
+                            </div>
+
+        <div class="bem-order-summary__row row" id="vat">
+            <span class="bem-order-summary__label">VAT (included)</span>
+            <span class="bem-order-summary__value">&#163;30.83</span>
+        </div>
+
+                            <div class="bem-order-summary__row row" id="delivery">
+            <span class="bem-order-summary__label">
+                Delivery
+            </span>
+            <span class="bem-order-summary__value">
+                <input disabled="true" id="NotSelectedDeliveryValue" name="NotSelectedDeliveryValue" type="hidden" value="not selected" />
+Free            </span>
+        </div>
+
+
+
+                            <div class="bem-order-summary__row--total row">
+            <span class="bem-order-summary__label--total">
+                Total
+            </span>
+            <input disabled="true" id="BasketTotalWithoutShipping" name="BasketTotalWithoutShipping" type="hidden" value="&amp;#163;184.99" />
+            <input disabled="true" id="BasketTotalWithShippingRawValue" name="BasketTotalWithShippingRawValue" type="hidden" value="184.99" />
+            <span id="orderSummary-total" class="bem-order-summary__value--total js-orderSummary-total">
+                &#163;184.99
+            </span>
+        </div>
+
+                    
+                </div>
+                <script>
+    window.universal_variable = window.universal_variable || { "version": "1.2.1" };
+    
+window.universal_variable.basket = {"id":"fc9c562bac4f421b82aea489","currency":"GBP","subtotal":184.99,"subtotal_checkout":184.99,"subtotal_include_tax":true,"voucher_discount":0,"tax":30.83,"shipping_cost":0,"total":184.99,"total_checkout":184.99,"line_items":[{"product":{"id":"105580871","url":null,"name":"ELEMNT BOLT GPS Cycle Computer","description":null,"manufacturer":"Wahoo","category_id":"Computers","category":"Computers","subcategory":null,"merchandising_category":null,"merchandising_subcategory":null,"categories":null,"linked_products":null,"currency":"GBP","unit_sale_price":184.99,"unit_price":184.99,"pid":"100302782","media_type":null,"skus":null,"in_stock":false,"size":"One Size","color":"Stealth Black","review_volume":0,"review_rating":null,"description_length":null,"unit_price_checkout":184.99,"unit_sale_price_checkout":184.99,"shipping_options":null,"V12OptionID":-1},"quantity":1,"subtotal":184.99,"total_discount":0.00}],"shipping_method":"By standard tracked delivery ","voucher_code":null}
+
+</script>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form action="/secure/checkout/confirmation/ResponsiveConfirmOrder" id="postConfirmation" method="post"><input name="__RequestVerificationToken" type="hidden" value="rOqz_7NEJAs39JPM7pr5Eqx6mmn8ft7dw-Pp53OHS2xy6k4_RkHQJSwE9hrgB0971T9-P21kSMzGSTTUtDmsm8UBIJc1" /><input data-val="true" data-val-required="The ReturningCustomer field is required." id="ReturningCustomer" name="ReturningCustomer" type="hidden" value="True" /><input id="DeliveryMethodIndex" name="DeliveryMethodIndex" type="hidden" value="0" />                <div id="qa-confirmationPaymentBox" class="row">
+                    <div class="col-xs-12">
+                        <h3 class="bem-typography__header-3">Payment</h3>
+
+<script src="https://www.paypal.com/sdk/js?client-id=AW9iCrI_fUt_6z9_ToiCOgn2bW9AOSHS6YXX8ANVdLHiNHsWOk9iDkwQeqCjQUw2tJacpYEmQ2Oj_-yT&currency=GBP"> // AS Test SB Client ID, sets currency to GBP
+    </script>
+
+    <div id="paypal-button-container"></div>
+
+    <!-- Add the checkout buttons, set up the order and approve the order -->
+    <script>
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            //using the SDK function to create an order
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: window.universal_variable.basket.subtotal //using the variables from the existing code to pass the payment amount
+              },
+                reference_id: 'default',
+                description: window.universal_variable.basket.line_items[0]["product"]["name"]
+            }]
+          });
+        },
+                    onApprove: function(data, actions) {
+                        //using the client SDK to capture the payment, and then calling the server, passing the order ID to securely send a get request with Oauth2.0 to receive order details to render the order confirmation page with payment details. -- request is successful, however, I haven't managed to intepret this to dynamically navigate to the received HTML page.
+                      return actions.order.capture().then(function(details) {
+                            fetch('approve/'+ data.orderID, {
+                                headers: {
+                                    'content-type': 'application/json'
+                                }
+                            })
+                         //   ============================
+                            //prints the html rendered template in the console.
+                            // .then(response => {
+                            //     return response.text();
+                            // })
+                            // .then(data => {
+                            //     console.log(data)
+                            // })
+                            ;
+                           // ==========================
+                 //        extended alert to display additional transaction data in the alert
+
+                 //       .then(function(details) {
+                 //    alert('Transaction approved by ' + details.payer.name.given_name +', \n
+                 // Order reference: ' + details.id + '.\n
+                 // Description: ' + details.purchase_units[0]["description"] + '. \n
+                 // Shipping address: ' + details.purchase_units[0]["shipping"]["address"]["address_line_1"] + ', \n' +
+                 // details.purchase_units[0]["shipping"]["address"]["admin_area_2"] + ', \n' +
+                 //  details.purchase_units[0]["shipping"]["address"]["admin_area_1"] + ', \n' +
+                 //   details.purchase_units[0]["shipping"]["address"]["postal_code"] + ', \n' +
+                 //    details.purchase_units[0]["shipping"]["address"]["country_code"])});
+          
+        
+      })}}) .render('#paypal-button-container'); // Display payment options on your web page
+    </script>
+
+
+                        <!--Voucher code panel-->
+<div class="bem-panels__panel-group">
+    <div class="bem-panels__panel">
+        <fieldset class="bem-forms__fieldset">
+            <label class="bem-panels__heading--select" for="addVoucher">
+                <h4 class="bem-panels__title">
+                    <div class="bem-forms__radio">
+                        <div class="bem-forms__label--checkbox">
+                            <input id="addVoucher" class="bem-forms__form-control--checkbox" type="checkbox">
+                            Do you have a voucher code?
+                        </div>
+                    </div>
+                </h4>
+            </label>
+            <div id="voucherHiddenContainer" class="bem-panels__content--voucher" style="display:none;">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="bem-forms__form-group">
+                            <div class="col-xs-12">
+                                <label class="bem-forms__label" for="voucherCode">
+                                    Voucher code
+                                </label>
+                                <div class="bem-forms__validation--error js-voucher-error" style="display: none;"></div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="bem-forms__controls">
+                                    <input type="text" class="bem-forms__form-control" id="voucherCode">
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <button type="button" id="applyVoucher" class="bem-button--secondary-large clear-margin">
+                                        Apply Voucher Code
+                                </button>
+                            </div>
+                            <div class="col-xs-12">
+                                <p>
+                                    <small>
+                                        If you don&#39;t use the full value of your Gift Voucher the remaining value will still be available for any future purchases by reusing the same voucher code.
+                                    </small>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+
+
+<input Value="true" data-val="true" data-val-required="The InvoiceNotRequired field is required." id="AdditionalInfo_InvoiceNotRequired" name="AdditionalInfo.InvoiceNotRequired" type="hidden" value="True" />                    </div>
+                </div>
+<div id="qa-confirmationOrderNotes" class="row">
+    <div class="col-xs-12">
+        <div class="bem-panels__panel-group">
+            <div href="" class="bem-panels__panel">
+                <fieldset class="bem-forms__fieldset">
+                    <label class="bem-panels__heading--select" for="addNote">
+                        <h4 class="bem-panels__title">
+                            <div class="bem-forms__radio">
+                                <div class="bem-forms__label--checkbox"><input id="addNote" class="bem-forms__form-control--checkbox" type="checkbox" />Add a note about your order for the Wiggle team</div>
+                            </div>
+                        </h4>
+                    </label>
+                    <div id="orderNotesHiddenContainer" class="bem-panels__content" style="display: none;">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="bem-forms__form-group">
+                                    <div class="bem-forms__controls">
+                                        <p>Adding a note may delay the processing of your order as it will be manually checked by a member of our team. Please note we cannot pass on any notes to couriers.</p>
+                                        <label class="bem-forms__label" for="AdditionalInfo_SelectedOrderNotesMessageType">Select a message type:</label>
+                                        <select class="bem-forms__form-control js-notes-message-type" id="AdditionalInfo_SelectedOrderNotesMessageType" name="AdditionalInfo.SelectedOrderNotesMessageType"><option selected="selected" value="0">Select a message type:</option>
+<option value="1">Please delay my order</option>
+<option value="2">Message for Customer Service</option>
+<option value="3">Anything Else</option>
+</select>
+                                    </div>
+                                </div>
+                                <div class="bem-forms__form-group" id="messageTypeBox" style="display: none;">
+                                    <div class="bem-forms__controls">
+                                        <label class="bem-forms__label" for="AdditionalInfo_OrderNotes">Message:</label>
+                                        <div class="bem-forms__validation--error" style="display: none;"></div>
+
+                                            <div id="notesTooltip0" class="bem-forms__tooltip js-notes-tooltip" 
+                                                 style="display:none;">
+                                                
+                                            </div>
+                                            <div id="notesTooltip1" class="bem-forms__tooltip js-notes-tooltip" 
+                                                 style="display:none;">
+                                                Please confirm how long you require your order to be held for in the comments box below.
+                                            </div>
+                                            <div id="notesTooltip2" class="bem-forms__tooltip js-notes-tooltip" 
+                                                 style="display:none;">
+                                                
+                                            </div>
+                                            <div id="notesTooltip3" class="bem-forms__tooltip js-notes-tooltip" 
+                                                 style="display:none;">
+                                                
+                                            </div>
+
+                                        <textarea class="bem-forms__form-control" cols="50" id="AdditionalInfo_OrderNotes" name="AdditionalInfo.OrderNotes" rows="3">
+</textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>                
+                
+                </div>
+</form>        </div>
+    </div>
+</div>
+
+        </div>
+
+        <footer class="bem-checkout__footer" data-page-area="Footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <p class="text-center">
+                            <a data-ga-label="Terms & conditions" href="/h/option/terms_conditions?isInLightBox=True&amp;isCheckout=True" class="checkoutlightbox">
+                                Terms &amp; conditions
+                            </a>
+                        </p>
+                        <small class="bem-checkout__footer-info text-center">
+                            &copy; 2021 Wiggle Ltd. 1000 Lakeside, Suite 310, Third Floor N E Wing, Portsmouth, Hampshire, PO6 3EN, United Kingdom
+                            <br />
+                            Company No: 2667809 | VAT No: GB 884 2571 94
+                        </small>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
+    </div>
+    <div id="checkout-lightbox" style="display: none;">
+    <div id="checkout-lightbox-container">
+        <div class="bem-dialogue__container">
+            <div class="row bem-dialogue__content">
+                <div class="col-xs-6">
+                    <h3 id="checkout-lightbox-title" class="bem-dialogue__title"></h3>
+                </div>
+                <div class="col-xs-6">
+                    <div id="dialogue-close1" class="bem-button--secondary pull-right">Cancel <i class="icon icon-cancel"></i></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bem-dialogue__content--overflow">
+                    <div id="checkout-lightbox-content" class="col-xs-12"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="bem-dialogue__content">
+                    <div id="dialogue-close2" class="bem-button--secondary-large">Cancel</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
